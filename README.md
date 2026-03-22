@@ -1,4 +1,4 @@
-needed packages:
+**needed packages:**
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch) // 1 fuckass program that every linux user uses
 - [foot](https://codeberg.org/dnkl/foot) // terminal of choice
 - [fuzzel](https://codeberg.org/dnkl/fuzzel) // fuzzy search 
@@ -9,7 +9,7 @@ needed packages:
 - [soteria](https://github.com/imvaskel/soteria) // polkit
 - [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) // libadwaita ported to gtk3
 
-needed fonts:
+**needed fonts:**
 - iosevka
 
 wallpaper stored in `~/.local/share/wallpaper.png`
