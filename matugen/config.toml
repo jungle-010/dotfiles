@@ -1,0 +1,31 @@
+[config]
+version_check = false
+
+[config.wallpaper]
+set_wallpaper = true
+command = "awww img {{image}}"
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-3.0/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-4.0/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/system24.css'
+output_path = '~/.config/vesktop/themes/system24-matugen.css'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/colors.ini'
+output_path = '~/.config/fuzzel/colors.ini'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.firefox-website-colors]
+input_path = '~/.config/matugen/templates/firefox-colors.css'
+output_path = "/home/jungle/.config/librewolf/librewolf/iyx3akp4.default-default/chrome/colors.css"
