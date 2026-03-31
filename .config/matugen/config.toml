@@ -1,0 +1,51 @@
+[config]
+version_check = false
+
+[config.wallpaper]
+set_wallpaper = true
+command = "awww img {{image}}"
+set = true
+
+#[templates.gtk3]
+#input_path = '~/.config/matugen/templates/gtk-3.0/gtk.css'
+#output_path = '~/.config/gtk-3.0/gtk.css'
+
+#[templates.gtk4]
+#input_path = '~/.config/matugen/templates/gtk-4.0/gtk.css'
+#output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-3.0/gtk.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-4.0/gtk.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/system24.css'
+output_path = '~/.config/vesktop/themes/system24-matugen.css'
+
+[templates.vencord]
+input_path = '~/.config/matugen/templates/system24.css'
+output_path = '~/.config/Vencord/themes/system24-matugen.css'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/colors.ini'
+output_path = '~/.config/fuzzel/colors.ini'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunstrc'
+output_path = '~/.config/dunst/dunstrc'
+post_hook = 'dunstctl reload'
+
+[templates.sway]
+input_path = '~/.config/matugen/templates/sway-colors.conf'
+output_path = '~/.config/sway/colors.conf'
+post_hook = 'swaymsg reload'
