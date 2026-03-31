@@ -1,0 +1,93 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": ["sway/workspaces", "mpris", "sway/mode"],
+  "modules-center": ["custom/clock"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "power-profiles-daemon",
+    "battery",
+    "backlight",
+  ],
+
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "format": "{name}",
+    "format-icons": {
+      "default": "",
+      "urgent": "!",
+      "focused": "",
+    },
+    "all-outputs": true,
+  },
+  "mpris": {
+    "format": "<span color='#252525'>[ </span>media: {artist} - {title}<span color='#252525'> ]</span>",
+    "format-paused": "<span color='#252525'>[ </span>media [⏸]: {artist} - {title}<span color='#252525'> ]</span>",
+    "max-length": 60,
+    "player-icons": {
+      "default": "▶",
+      "spotify": " ",
+    },
+    "status-icons": {
+      "paused": "⏸",
+    },
+    "artist-len": 15,
+    "title-len": 20,
+  },
+  "sway/mode": {
+    "format": "  {}",
+  },
+
+  "custom/gentoo-symbol": {
+    "format": "",
+  },
+
+  "custom/clock": {
+    "format": "<span color='#252525'>[ </span>{text}<span color='#252525'> ]</span>",
+    "exec": "date +'%H:%M %A, %b %d' | awk '{print tolower($0)}'",
+    "interval": 3,
+  },
+
+  "sway/language": {
+    "format": "<span color='#252525'>[ </span><span color='#8C8C8C'><b>key: </b></span>{short}<span color='#252525'> / </span>",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "<span color='#252525'>[ </span>vol: {volume}%",
+    "format-muted": "<span color='#252525'>[ </span>vol (m): {volume}%",
+  },
+
+  "battery": {
+    "format": "<span color='#252525'> / </span>bat: {capacity}%",
+    "format-charging": "<span color='#252525'> / </span>ac: {capacity}%",
+    "tooltip": false,
+    "interval": 20,
+  },
+
+  "power-profiles-daemon": {
+    "format": "<span color='#252525'> / </span>ppd: {icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "default",
+      "performance": "perf",
+      "balanced": "bal",
+      "power-saver": "power",
+    },
+  },
+
+  "backlight": {
+    "format": "<span color='#252525'> / </span>mon: {percent}%<span color='#252525'> ]</span>",
+    "tooltip": false,
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 7,
+    "tooltip": false,
+  },
+}
