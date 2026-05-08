@@ -4,7 +4,7 @@ version_check = false
 [config.wallpaper]
 set_wallpaper = true
 command = "awww img {{image}}"
-set = true
+set = false
 
 #[templates.gtk3]
 #input_path = '~/.config/matugen/templates/gtk-3.0/gtk.css'
@@ -49,3 +49,19 @@ post_hook = 'dunstctl reload'
 input_path = '~/.config/matugen/templates/sway-colors.conf'
 output_path = '~/.config/sway/colors.conf'
 post_hook = 'swaymsg reload'
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.foot]
+input_path = '~/.config/matugen/templates/foot.ini'
+output_path = '~/.config/foot/foot.ini'
+
+[templates.kvantum_kvconfig]
+input_path = './templates/kvantum-colors.kvconfig'
+output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
+
+[templates.kvantum_svg]
+input_path = './templates/kvantum-colors.svg'
+output_path = '~/.config/Kvantum/matugen/matugen.svg'
